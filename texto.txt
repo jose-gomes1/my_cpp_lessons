@@ -14,3 +14,7 @@ If none of it's of interest to you, you'd be the first
 //tipo da variável nomeDaVariavel = valor
 //nome da variável tem de ser em CamelCase e tem de ser intuitívo
 //escrever em inglês, não em português
+
+git add -A
+git commit -m X.x
+git push
