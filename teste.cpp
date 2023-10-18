@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 int NUM_PORT_SENS_HUM = 5;
 
    int oMeuNumero = 10;   //números inteiros
@@ -81,14 +83,3 @@ int NUM_PORT_SENS_HUM = 5;
     cout << "\n";
     return 0;
 }
-
-    /**
-     * @brief
-     * 
-     * @param a número inteiro
-    */
-//1 byte = 8 bits
-//byte é a unidade de medida na informática
-//tipo da variável nomeDaVariavel = valor
-//nome da variável tem de ser em CamelCase e tem de ser intuitívo
-//escrever em inglês, não em português
