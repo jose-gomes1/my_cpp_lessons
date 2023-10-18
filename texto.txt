@@ -4,3 +4,13 @@ Anything that brain of yours can think of can be found
 We've got mountains of content
 Some better, some worse
 If none of it's of interest to you, you'd be the first
+
+
+/**
+     * @brief
+     * 
+//1 byte = 8 bits
+//byte é a unidade de medida na informática
+//tipo da variável nomeDaVariavel = valor
+//nome da variável tem de ser em CamelCase e tem de ser intuitívo
+//escrever em inglês, não em português
