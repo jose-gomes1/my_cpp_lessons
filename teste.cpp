@@ -27,10 +27,6 @@ int NUM_PORT_SENS_HUM = 5;
     return 0;    
    }
 
-   void xpto(){
-        cout << "xpto" << endl;
-   }
-
    int main2()
    {
     int a = 5;
