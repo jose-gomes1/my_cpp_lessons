@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "asminhascontas.h"
 using namespace std;
 
 
@@ -21,6 +22,13 @@ int NUM_PORT_SENS_HUM = 5;
 
    int main()
    {
+    cout << log (16) << endl;
+    cout << f(2) << endl;
+    return 0;    
+   }
+
+   int main2()
+   {
     int a = 5;
     int b = 5;
     int c = 2;
@@ -30,7 +38,7 @@ int NUM_PORT_SENS_HUM = 5;
     return 0;
    }
 
-   int main2()
+   int main3()
    {    
     //tendo em consideração que a área do círculo é PI * raio * raio, calcula a área do círculo com raio digitado pelo usuário
     cout << "Qual é o raio do círculo?" << endl;   //imprime no ecrã
@@ -40,7 +48,7 @@ int NUM_PORT_SENS_HUM = 5;
     return 0;
    }
 
-   int main3()
+   int main4()
    {
     //tendo em consideração que a área do círculo é PI * raio * raio, calcula a área do círculo com raio 10
     int r = 10;
@@ -50,7 +58,7 @@ int NUM_PORT_SENS_HUM = 5;
     return 0;
    }
 
-   int main4()
+   int main5()
    {
     cout << "Digite um número: ";   //imprime no ecrã
     cin >> numero;  //lê do teclado
@@ -59,7 +67,7 @@ int NUM_PORT_SENS_HUM = 5;
    }
 
 
-   int main5()
+   int main6()
    {
     cout << PI << " Valor de PI\n";   //comentário
     cout << sensorTemperatura << " valor do sensor de temperatura\t";
@@ -74,7 +82,7 @@ int NUM_PORT_SENS_HUM = 5;
 *
 */
 
-; int main6()
+; int main7()
 {
     cout << "Hello \\ World!\t";  //comentário
     cout << "I'm a C++ program\n";   
