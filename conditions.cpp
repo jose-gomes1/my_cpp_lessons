@@ -3,7 +3,7 @@ using namespace std;
 
 int a=10, b=12, c=9;
 
-int main(){
+int main2(){
 
     if ( a < b){
         cout << "CÊ TA CERTO" << endl;
@@ -18,3 +18,17 @@ int main(){
 
     return 0;
 }
+
+int main(){
+    int num;
+
+    cout << "Digite um número.";
+    cin >> num;
+    
+    if(num >= 0){
+        cout << "O número que escolheste é igual ou maior que 0\n";
+    }else if (num < 0){
+        cout << "O número que escolheste é menor que 0\n";
+    }
+    return 0;
+    }
