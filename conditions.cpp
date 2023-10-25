@@ -26,9 +26,9 @@ int main(){
     cin >> num;
     
     if(num >= 0){
-        cout << "O número que escolheste é positivo" << endl;
+        cout << "O número que escolheste é positivo." << endl;
     }else if (num < 0){
-        cout << "O número que escolheste é negativo" << endl;
+        cout << "O número que escolheste é negativo." << endl;
     }
     return 0;
     }
