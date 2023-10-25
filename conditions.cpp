@@ -21,9 +21,10 @@ int main2(){
 
 int main(){
     int num;
-
+    int result;
     cout << "Digite um número." << endl;
     cin >> num;
+    result = num % 2;
     
     if(num >= 0){
         cout << "O número que escolheste é positivo." << endl;
@@ -31,16 +32,14 @@ int main(){
         cout << "O número que escolheste é negativo." << endl;
     }
 
-    switch (num)
+    switch (result)
 {
-case 1: 
-    cout << "O número é 1." << endl;
-case 2: 
-    cout << "O número é 2." << endl;
+case 0: 
+    cout << "O número é par." << endl;
     break;
 
 default:
-    cout << "O número não é 1 e nem é 2." << endl;
+    cout << "O número não é par." << endl;
     break;
 }
 
