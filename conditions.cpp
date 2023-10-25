@@ -1,4 +1,7 @@
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
+
 using namespace std;
 
 int a=10, b=12, c=9;
@@ -54,7 +57,8 @@ default:
 
     int main(){
         int num=0;
-        int numSorte=20;
+        srand((unsigned) time (0));
+        int numSorte= 1+(rand()%100);
         while (numSorte != num)
         {
             cout << "Qual o número da sorte?" << endl;
