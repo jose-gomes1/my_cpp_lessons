@@ -25,10 +25,10 @@ int main(){
     cout << "Digite um número." << endl;
     cin >> num;
     
-    if(num > 0){
-        cout << "O número que escolheste é igual ou maior que 0" << endl;
+    if(num >= 0){
+        cout << "O número que escolheste é positivo" << endl;
     }else if (num < 0){
-        cout << "O número que escolheste é menor que 0" << endl;
+        cout << "O número que escolheste é negativo" << endl;
     }
     return 0;
     }
