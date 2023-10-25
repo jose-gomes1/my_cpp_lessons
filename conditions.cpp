@@ -19,7 +19,7 @@ int main2(){
     return 0;
 }
 
-int main(){
+int main3(){
     int num;
     int result;
     cout << "Digite um número." << endl;
@@ -43,6 +43,23 @@ default:
     break;
 }
 
+    while (num < 5)
+    {
+        cout << "Digite um número." << endl;
+        cin >> num;
+    }
+
     return 0;
     }
- 
+
+    int main(){
+        int num=0;
+        int numSorte=20;
+        while (numSorte != num)
+        {
+            cout << "Qual o número da sorte?" << endl;
+            cin >> num;
+        }
+        cout << "Acertaste" << endl;
+        
+    }
