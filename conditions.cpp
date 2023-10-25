@@ -26,9 +26,9 @@ int main(){
     cin >> num;
     
     if(num >= 0){
-        cout << "O número que escolheste é igual ou maior que 0\n";
+        cout << "O número que escolheste é igual ou maior que 0\n" << endl;
     }else if (num < 0){
-        cout << "O número que escolheste é menor que 0\n";
+        cout << "O número que escolheste é menor que 0\n" << endl;
     }
     return 0;
     }
