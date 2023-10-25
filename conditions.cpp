@@ -22,13 +22,13 @@ int main2(){
 int main(){
     int num;
 
-    cout << "Digite um número.";
+    cout << "Digite um número." << endl;
     cin >> num;
     
-    if(num >= 0){
-        cout << "O número que escolheste é igual ou maior que 0\n" << endl;
+    if(num > 0){
+        cout << "O número que escolheste é igual ou maior que 0" << endl;
     }else if (num < 0){
-        cout << "O número que escolheste é menor que 0\n" << endl;
+        cout << "O número que escolheste é menor que 0" << endl;
     }
     return 0;
     }
