@@ -2,6 +2,8 @@
 #include <ctime>
 #include <cstdlib>
 
+using namespace std;
+
 int a=10, b=12, c=9;
 
 int main1(){
@@ -56,9 +58,10 @@ default:
     int main(){
         for(int n=0; n<10; n++){
             cout << n << endl;
-            if (n ==4){
-                break;
+            if (n == 4){
+                continue;
             }
         }
+        cout << "Fim do ciclo For" << endl;
         return 0;
     }
