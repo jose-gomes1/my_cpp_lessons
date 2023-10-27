@@ -56,11 +56,11 @@ default:
     }
 
     int main(){
-        for(int n=0; n<10; n++){
-            cout << n << endl;
+        for(int n=0; n<=10; n++){
             if (n == 4){
                 continue;
             }
+            cout << n << endl;
         }
         cout << "Fim do ciclo For" << endl;
         return 0;
