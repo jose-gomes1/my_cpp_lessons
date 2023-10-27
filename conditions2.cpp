@@ -56,12 +56,11 @@ default:
     }
 
     int main(){
-        for(int n=0; n<=10; n++){
-            if (n == 4){
-                continue;
-            }
-            cout << n << endl;
+
+        int test[4] = {7,8,9,8};
+        for(int i=0; i<4; i++){
+            cout << test[i] << endl;
         }
-        cout << "Fim do ciclo For" << endl;
+
         return 0;
     }
