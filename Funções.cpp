@@ -11,11 +11,16 @@ string letras2[2][4] = {
 };
 
 int main(){
-    cout << letras2[1][2] << endl;
+    
+    for(int i = 0; i < 2; i++){
+        for (int j = 0; j < 4; j++){
+        cout << letras2[i][0] << endl;
+        }
+    }
 
-    cout << myArray[4] << endl;
-    cout << sizeof(myArray)/4 << endl;
-
+    //cout << letras2[1][2] << endl;
+    //cout << myArray[4] << endl;
+    //cout << sizeof(myArray)/4 << endl;
     return 0;
 }
 
