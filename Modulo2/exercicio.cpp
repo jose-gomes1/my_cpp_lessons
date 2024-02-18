@@ -29,13 +29,17 @@ int main() {
 
     // Média de notas
     float notas[5];
-    float soma = 0;
     cout << "Digite as notas dos 5 alunos: ";
     for (int i = 0; i < 5; ++i) {
-        cin >> notas[i];
-        soma += notas[i];
+            cin >> notas[i];
     }
-    float media = soma / 5;
+
+    float media = 0;
+    for (int i = 0; i < 5; ++i) {
+        media += notas[i];
+    }
+    media /= 5;
+
     cout << "Média das notas: " << media << endl;
 
     float maior_nota = notas[0];
