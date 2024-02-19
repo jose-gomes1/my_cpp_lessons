@@ -30,12 +30,12 @@ int main() {
     // Média de notas
     float notas[5];
     cout << "Digite as notas dos 5 alunos: ";
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 5; i++) {
             cin >> notas[i];
     }
 
     float media = 0;
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 5; i++) {
         media += notas[i];
     }
     media /= 5;
@@ -44,7 +44,7 @@ int main() {
 
     float maior_nota = notas[0];
     float menor_nota = notas[0];
-    for (int i = 1; i < 5; ++i) {
+    for (int i = 1; i < 5; i++) {
         if (notas[i] > maior_nota) {
             maior_nota = notas[i];
         }
@@ -58,13 +58,13 @@ int main() {
     // Encontrar maior e menor elemento em um array de inteiros
     int numeros[10];
     cout << "Digite 10 números inteiros: ";
-    for (int i = 0; i < 10; ++i) {
+    for (int i = 0; i < 10; i++) {
         cin >> numeros[i];
     }
 
     int maior_numero = numeros[0];
     int menor_numero = numeros[0];
-    for (int i = 1; i < 10; ++i) {
+    for (int i = 1; i < 10; i++) {
         if (numeros[i] > maior_numero) {
             maior_numero = numeros[i];
         }
@@ -83,7 +83,7 @@ int main() {
     cin >> n;
 
     cout << "Tabuada de " << n << ":" << endl;
-    for (int i = 1; i <= 10; ++i) {
+    for (int i = 1; i <= 10; i++) {
         cout << n << " x " << i << " = " << n * i << endl;
     }
 
