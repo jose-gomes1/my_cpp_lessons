@@ -1,4 +1,5 @@
 #include <iostream>
+#include <unistd.h>
 using namespace std;
 
 #define PI 3.14159
@@ -91,6 +92,13 @@ void menu(){
     cout << "4. Sair\n";
 }
 
+int getOpcao(){
+    int opcao;
+    cout << "Qual opção queres escolher? ";
+    cin >> opcao;
+    return opcao;
+}
+
 void choose(int opcao){
     switch (opcao){
     case 1:
@@ -114,8 +122,10 @@ void choose(int opcao){
 int main(){
     int opcao;
     menu();
-    cin >> opcao;
+    opcao = getOpcao();
+    system("clear");
     choose(opcao);
+    sleep(4);
+    system("clear");
     return main();
 }
-
