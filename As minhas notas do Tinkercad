@@ -1,0 +1,3 @@
+constantes são definidas em caps lock com _ no lugar de espaços
+Analog read lê valores analógicos, enquanto o digital read lê valores de 0 a 1
+tempo é long  
