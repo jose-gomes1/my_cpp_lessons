@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-const int MAX_PRODUTOS = 100; // Limite máximo de produtos
+const int maximoProdutos = 100; // Limite máximo de produtos
 
 struct Produto {
     string nome;
@@ -11,7 +11,7 @@ struct Produto {
 
 // Função para adicionar um produto ao array de produtos
 void adicionarProduto(Produto produtos[], int& quantidadeAtual) {
-    if (quantidadeAtual >= MAX_PRODUTOS) {
+    if (quantidadeAtual >= maximoProdutos) {
         cout << "Limite de produtos atingido!" << endl;
         return;
     }
@@ -62,7 +62,7 @@ float calcularValorTotal(const Produto produtos[], int quantidadeAtual) {
 }
 
 int main() {
-    Produto produtos[MAX_PRODUTOS]; // Array de produtos
+    Produto produtos[maximoProdutos]; // Array de produtos
     int quantidadeAtual = 0; // Quantidade de produtos cadastrados
     int opcao;
 
