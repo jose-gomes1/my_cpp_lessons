@@ -87,7 +87,7 @@ int main() {
                 calcularValorTotal(produtos, quantidadeAtual);  // Calcular valor total do stock
                 break;
             case 0:
-                cout << "Saindo..." << endl;  // Sair do programa
+                cout << "Adeus..." << endl;  // Sair do programa
                 break;
             default:
                 cout << "Opção inválida, tente novamente!" << endl;
