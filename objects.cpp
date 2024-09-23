@@ -9,9 +9,13 @@ class Carro{
         //métodos são funções dentro de classes
         void setVelocidade(int v){
             velocidade = v;
+            setVelMedia(velocidade);
         }
     private:
         int velocidade;
+        void setVelMedia(int vm){
+            int velMedia = vm;
+        }
 };
 
 int main(){
