@@ -1,8 +1,6 @@
 #include <fstream>
 #include <iostream>
-#include <sstream>
-#include <string>
-#include <vector>
+#include <sstream> // biblioteca para manipulação de strings
 using namespace std;
 
 const int maximoProdutos = 100; // Limite máximo de produtos
@@ -24,10 +22,10 @@ int carregarProdutos(Produto produtos[]) {
     if (dB.is_open()) {
         string linha;
         while (getline(dB, linha) && quantidadeAtual < maximoProdutos) {
-            stringstream ss(linha);
-            string idStr, quantidadeStr, precoStr, statusStr;
+            stringstream ss(linha); //permite ler e escrever dados numa string
+            string idStr, quantidadeStr, precoStr, statusStr; //para serem usadas no getline
 
-            getline(ss, idStr, ',');
+            getline(ss, idStr, ','); //ss (stringstream) é onde os dados são lidos, ',' delimita
             getline(ss, produtos[quantidadeAtual].nome, ',');
             getline(ss, quantidadeStr, ',');
             getline(ss, precoStr, ',');
@@ -87,11 +85,11 @@ void adicionarProduto(Produto produtos[], int& quantidadeAtual) {
 // Função para exibir todos os produtos
 void exibirProdutos(const Produto produtos[], int quantidadeAtual) {
     if (quantidadeAtual == 0) {
-        cout << "Nenhum produto cadastrado!" << endl;
+        cout << "Nenhum produto registrado!" << endl;
         return;
     }
 
-    cout << "Produtos cadastrados:\n";
+    cout << "Produtos registrados:\n";
     for (int i = 0; i < quantidadeAtual; i++) {
         if (produtos[i].status == 'A') { // Exibe apenas produtos ativos
             cout << "ID: " << produtos[i].id << ", "
@@ -106,16 +104,16 @@ void exibirProdutos(const Produto produtos[], int quantidadeAtual) {
 // Função para alterar um produto
 void alterarProduto(Produto produtos[], int quantidadeAtual) {
     int id;
-    cout << "Digite o ID do produto que deseja alterar: ";
+    cout << "Por favor, digite o ID do produto que deseja alterar: ";
     cin >> id;
 
     // Procura o produto pelo ID
     for (int i = 0; i < quantidadeAtual; i++) {
         if (produtos[i].id == id && produtos[i].status == 'A') {
-            cout << "Alterando produto " << produtos[i].nome << ":\n";
+            cout << "A alterar o produto " << produtos[i].nome << ":\n";
             cout << "Novo nome: ";
-            cin.ignore();
-            getline(cin, produtos[i].nome);
+            cin.ignore(); //ignora caracteres como o \n do buffer de entrada
+            getline(cin, produtos[i].nome); //lê uma string com espaços, como "Batatas fritas"
             cout << "Nova quantidade: ";
             cin >> produtos[i].quantidade;
             cout << "Novo preço: ";
@@ -143,30 +141,28 @@ void eliminarProduto(Produto produtos[], int& quantidadeAtual) {
     cout << "Produto não encontrado." << endl;
 }
 
-// Função para perguntar se o usuário deseja criar um novo arquivo
-bool perguntarCriarArquivo() {
+// Função para perguntar se o utilizador deseja criar um novo arquivo
+bool perguntarCriarArquivo() { //true ou false
     int opcao;
     cout << "Arquivo 'db.csv' não encontrado." << endl;
-    cout << "Deseja criar um novo arquivo? (1 - Sim, 2 - Não): ";
+    cout << "O estimado utilizador expressa a honrosa vontade de dar início ao processo de criação de um novo arquivo no sistema? (1 - Sim, 2 - Não): ";
     cin >> opcao;
     return (opcao == 1);
 }
 
 int main() {
     Produto produtos[maximoProdutos]; // Array de produtos
-    int quantidadeAtual = 0; // Contador de produtos
-
     // Carregar produtos do arquivo
-    quantidadeAtual = carregarProdutos(produtos);
+    int quantidadeAtual = carregarProdutos(produtos);
 
     // Verifica se algum produto foi carregado
     if (quantidadeAtual == 0 && !perguntarCriarArquivo()) {
-        cout << "Encerrando o programa..." << endl;
+        cout << "Adeus..." << endl;
         return 0;
     }
 
-    // Caso o usuário escolha criar um novo arquivo, apenas continue
-    cout << "Você pode começar a adicionar produtos." << endl;
+    // Caso o utilizador escolha criar um novo arquivo,continua
+    cout << "Já pode começar a adicionar produtos, meu caro." << endl;
 
     int opcao;
 
@@ -176,24 +172,24 @@ int main() {
         cout << "3. Alterar Produto\n";
         cout << "4. Eliminar Produto\n";
         cout << "0. Sair\n";
-        cout << "Escolha uma opção: ";
+        cout << "Caso não seja do seu incômodo, escolha uma opção: ";
         cin >> opcao;
 
         switch (opcao) {
             case 1:
                 adicionarProduto(produtos, quantidadeAtual);
-                salvarProdutos(produtos, quantidadeAtual); // Salva após adicionar
+                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 2:
                 exibirProdutos(produtos, quantidadeAtual);
                 break;
             case 3:
                 alterarProduto(produtos, quantidadeAtual);
-                salvarProdutos(produtos, quantidadeAtual); // Salva após alterar
+                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 4:
                 eliminarProduto(produtos, quantidadeAtual);
-                salvarProdutos(produtos, quantidadeAtual); // Salva após eliminar
+                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 0:
                 cout << "Adeus..." << endl;
