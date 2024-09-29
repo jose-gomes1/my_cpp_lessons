@@ -14,9 +14,8 @@ struct Produto {
 };
 
 // Função para ler produtos do arquivo CSV
-int carregarProdutos(Produto produtos[]) {
+int carregarProdutos(Produto produtos[], int& quantidadeAtual) {
     ifstream dB("db.csv");
-    int quantidadeAtual = 0;
 
     // Verifica se o arquivo está aberto
     if (dB.is_open()) {
@@ -152,8 +151,9 @@ bool perguntarCriarArquivo() { //true ou false
 
 int main() {
     Produto produtos[maximoProdutos]; // Array de produtos
+    int quantidadeAtual = 0;
     // Carregar produtos do arquivo
-    int quantidadeAtual = carregarProdutos(produtos);
+    carregarProdutos(produtos, quantidadeAtual);
 
     // Verifica se algum produto foi carregado
     if (quantidadeAtual == 0 && !perguntarCriarArquivo()) {
