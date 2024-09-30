@@ -30,15 +30,9 @@ int carregarProdutos(Produto produtos[], int& quantidadeAtual) {
             getline(ss, precoStr, ',');
             getline(ss, statusStr);
 
-<<<<<<< HEAD
             produtos[quantidadeAtual].id = stoi(idStr); //converter uma string em int
             produtos[quantidadeAtual].quantidade = stoi(quantidadeStr);
             produtos[quantidadeAtual].preco = stof(precoStr); //converter uma string em float
-=======
-            produtos[quantidadeAtual].id = stoi(idStr);
-            produtos[quantidadeAtual].quantidade = stoi(quantidadeStr);
-            produtos[quantidadeAtual].preco = stof(precoStr);
->>>>>>> origin/main
             produtos[quantidadeAtual].status = statusStr[0];
             quantidadeAtual++;
         }
@@ -150,11 +144,7 @@ void eliminarProduto(Produto produtos[], int& quantidadeAtual) {
 bool perguntarCriarArquivo() { //true ou false
     int opcao;
     cout << "Arquivo 'db.csv' não encontrado." << endl;
-<<<<<<< HEAD
     cout << "Estimado utilizador expressa a honrosa vontade de dar início ao processo de criação de um novo arquivo no sistema? (1 - Sim, 2 - Não): ";
-=======
-    cout << "O estimado utilizador expressa a honrosa vontade de dar início ao processo de criação de um novo arquivo no sistema? (1 - Sim, 2 - Não): ";
->>>>>>> origin/main
     cin >> opcao;
     return (opcao == 1);
 }
@@ -202,10 +192,7 @@ int main() {
                 salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 0:
-<<<<<<< HEAD
                 salvarProdutos(produtos, quantidadeAtual);
-=======
->>>>>>> origin/main
                 cout << "Adeus..." << endl;
                 break;
             default:
@@ -215,8 +202,4 @@ int main() {
     } while (opcao != 0);
 
     return 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/main
