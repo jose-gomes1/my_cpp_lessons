@@ -32,8 +32,8 @@ int carregarProdutos(Produto produtos[], int& quantidadeAtual) {
 
             produtos[quantidadeAtual].id = stoi(idStr); //converter uma string em int
             produtos[quantidadeAtual].quantidade = stoi(quantidadeStr);
-            produtos[quantidadeAtual].preco = stof(precoStr);
-            produtos[quantidadeAtual].status = statusStr[0]; //converter uma string em float
+            produtos[quantidadeAtual].preco = stof(precoStr); //converter uma string em float
+            produtos[quantidadeAtual].status = statusStr[0];
             quantidadeAtual++;
         }
         dB.close();
