@@ -175,24 +175,24 @@ int main() {
         cout << "Caso não seja do seu incômodo, escolha uma opção: ";
         cin >> opcao;
 
+        for(int opcao = 0; opcao < 5; opcao++){
+            salvarProdutos(produtos, quantidadeAtual);
+        }
+
         switch (opcao) {
             case 1:
                 adicionarProduto(produtos, quantidadeAtual);
-                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 2:
                 exibirProdutos(produtos, quantidadeAtual);
                 break;
             case 3:
                 alterarProduto(produtos, quantidadeAtual);
-                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 4:
                 eliminarProduto(produtos, quantidadeAtual);
-                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 0:
-                salvarProdutos(produtos, quantidadeAtual);
                 cout << "Adeus..." << endl;
                 break;
             default:
