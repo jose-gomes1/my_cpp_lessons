@@ -144,7 +144,7 @@ void eliminarProduto(Produto produtos[], int& quantidadeAtual) {
 bool perguntarCriarArquivo() { //true ou false
     int opcao;
     cout << "Arquivo 'db.csv' não encontrado." << endl;
-    cout << "O estimado utilizador expressa a honrosa vontade de dar início ao processo de criação de um novo arquivo no sistema? (1 - Sim, 2 - Não): ";
+    cout << "Estimado utilizador expressa a honrosa vontade de dar início ao processo de criação de um novo arquivo no sistema? (1 - Sim, 2 - Não): ";
     cin >> opcao;
     return (opcao == 1);
 }
