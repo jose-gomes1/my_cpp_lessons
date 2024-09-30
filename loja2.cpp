@@ -192,6 +192,7 @@ int main() {
                 salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 0:
+                salvarProdutos(produtos, quantidadeAtual);
                 cout << "Adeus..." << endl;
                 break;
             default:
