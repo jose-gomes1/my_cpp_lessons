@@ -15,7 +15,9 @@ struct Produto {
 
 // Função para ler produtos do arquivo CSV
 int carregarProdutos(Produto produtos[], int& quantidadeAtual) {
-    ifstream dB("db.csv"); //verifica se o ficheiro existe
+    ifstream dB("db.csv");
+
+    // Verifica se o arquivo está aberto
     if (dB.is_open()) {
         string linha;
         while (getline(dB, linha) && quantidadeAtual < maximoProdutos) {
@@ -31,9 +33,6 @@ int carregarProdutos(Produto produtos[], int& quantidadeAtual) {
             produtos[quantidadeAtual].id = stoi(idStr); //converter uma string em int
             produtos[quantidadeAtual].quantidade = stoi(quantidadeStr);
             produtos[quantidadeAtual].preco = stof(precoStr); //converter uma string em float
-            produtos[quantidadeAtual].id = stoi(idStr);
-            produtos[quantidadeAtual].quantidade = stoi(quantidadeStr);
-            produtos[quantidadeAtual].preco = stof(precoStr);
             produtos[quantidadeAtual].status = statusStr[0];
             quantidadeAtual++;
         }
@@ -44,7 +43,8 @@ int carregarProdutos(Produto produtos[], int& quantidadeAtual) {
 
 // Função para salvar produtos no arquivo CSV
 void salvarProdutos(const Produto produtos[], int quantidadeAtual) {
-    ofstream dB("db.csv"); //cria o ficheiro
+    ofstream dB("db.csv");
+    // Verifica se o arquivo está aberto
     if (dB.is_open()) {
         for (int i = 0; i < quantidadeAtual; i++) {
             dB << produtos[i].id << "," 
@@ -150,6 +150,7 @@ bool perguntarCriarArquivo() { //true ou false
 }
 
 int main() {
+    system("clear");
     Produto produtos[maximoProdutos]; // Array de produtos
     int quantidadeAtual = 0;
     // Carregar produtos do arquivo
@@ -167,35 +168,43 @@ int main() {
     int opcao;
 
     do {
-        cout << "\n1. Adicionar Produto\n";
+        cout << "===========Menu=============\n";
+        cout << "1. Adicionar Produto\n";
         cout << "2. Exibir Produtos\n";
         cout << "3. Alterar Produto\n";
         cout << "4. Eliminar Produto\n";
         cout << "0. Sair\n";
+        cout << "============================\n";
         cout << "Caso não seja do seu incômodo, escolha uma opção: ";
         cin >> opcao;
 
-        for(int opcao = 0; opcao < 5; opcao++){
-            salvarProdutos(produtos, quantidadeAtual);
-        }
-
         switch (opcao) {
             case 1:
+                system("clear");
                 adicionarProduto(produtos, quantidadeAtual);
+                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 2:
+                system("clear");
                 exibirProdutos(produtos, quantidadeAtual);
                 break;
             case 3:
+                system("clear");
                 alterarProduto(produtos, quantidadeAtual);
+                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 4:
+                system("clear");
                 eliminarProduto(produtos, quantidadeAtual);
+                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 0:
+                system("clear");
+                salvarProdutos(produtos, quantidadeAtual);
                 cout << "Adeus..." << endl;
                 break;
             default:
+                system("clear");
                 cout << "Opção inválida, tente novamente!" << endl;
                 break;
         }
