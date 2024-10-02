@@ -150,7 +150,6 @@ bool perguntarCriarArquivo() { //true ou false
 }
 
 int main() {
-    system("clear");
     Produto produtos[maximoProdutos]; // Array de produtos
     int quantidadeAtual = 0;
     // Carregar produtos do arquivo
@@ -178,35 +177,29 @@ int main() {
         cout << "Caso não seja do seu incômodo, escolha uma opção: ";
         cin >> opcao;
 
-        for(int opcao; opcao < 5; opcao++){
-            salvarProdutos(produtos, quantidadeAtual);
-        }
 
         switch (opcao) {
             case 1:
-                system("clear");
                 adicionarProduto(produtos, quantidadeAtual);
                 break;
             case 2:
-                system("clear");
                 exibirProdutos(produtos, quantidadeAtual);
                 break;
             case 3:
-                system("clear");
                 alterarProduto(produtos, quantidadeAtual);
                 break;
             case 4:
-                system("clear");
                 eliminarProduto(produtos, quantidadeAtual);
                 break;
             case 0:
-                system("clear");
                 cout << "Adeus..." << endl;
                 break;
             default:
-                system("clear");
                 cout << "Opção inválida, tente novamente!" << endl;
                 break;
+        }
+        for(int opcao = 0; opcao <= 5; opcao++){
+            salvarProdutos(produtos, quantidadeAtual);
         }
     } while (opcao != 0);
 
