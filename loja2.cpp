@@ -178,11 +178,14 @@ int main() {
         cout << "Caso não seja do seu incômodo, escolha uma opção: ";
         cin >> opcao;
 
+        for(int opcao; opcao < 5; opcao++){
+            salvarProdutos(produtos, quantidadeAtual);
+        }
+
         switch (opcao) {
             case 1:
                 system("clear");
                 adicionarProduto(produtos, quantidadeAtual);
-                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 2:
                 system("clear");
@@ -191,16 +194,13 @@ int main() {
             case 3:
                 system("clear");
                 alterarProduto(produtos, quantidadeAtual);
-                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 4:
                 system("clear");
                 eliminarProduto(produtos, quantidadeAtual);
-                salvarProdutos(produtos, quantidadeAtual);
                 break;
             case 0:
                 system("clear");
-                salvarProdutos(produtos, quantidadeAtual);
                 cout << "Adeus..." << endl;
                 break;
             default:
