@@ -46,7 +46,6 @@ void salvarProdutos(const Produto produtos[], int quantidadeAtual) {
     ofstream dB("db.csv");
     // Verifica se o ficheiro está aberto
     if (dB.is_open()) {
-        dB << "ID, Nome, Quantidade, Preço, Status\n";
         for (int i = 0; i < quantidadeAtual; i++) {
             dB << produtos[i].id << "," 
                << produtos[i].nome << ","
