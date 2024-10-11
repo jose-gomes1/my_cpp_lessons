@@ -163,7 +163,7 @@ int main() {
     int opcao;
     Computer* pcSelecionado = &pc1;  // Por padrão, o PC1 é selecionado
 
-          cout << "----- Escolha do Computador -----\n";
+        cout << "----- Escolha do Computador -----\n";
         cout << "Selecione o computador: (1) PC1 (2) PC2\n";
         int pcChoice;
         cin >> pcChoice;
