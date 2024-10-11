@@ -53,14 +53,6 @@ private:
         }
     }
 
-public:
-    // Construtor que aceita um objeto Hardware como parâmetro
-    Computer(Hardware hw) : hardware(hw), ligado(false) {
-        cout << "Computador montado com o seguinte hardware:\n";
-        verHardware();
-        cout << " " << endl;
-    }
-
     // Método para ver os detalhes do hardware
     void verHardware() {
         cout << "RAM: " << hardware.ram << endl;
@@ -70,7 +62,14 @@ public:
         cout << "Fonte de Alimentação (PSU): " << hardware.psu << endl;
         cout << "Disco: " << hardware.disco << endl;
         cout << "Periféricos: " << hardware.perifericos << endl;
-        cout << "Ventoinhas: " << hardware.fan << endl;
+        cout << "Ventoinhas: " << hardware.fan << endl;}
+
+public:
+    // Construtor que aceita um objeto Hardware como parâmetro
+    Computer(Hardware hw) : hardware(hw), ligado(false) {
+        cout << "Computador montado com o seguinte hardware:\n";
+        verHardware();
+        cout << " " << endl;
     }
 
     // Método para ligar o computador
