@@ -5,7 +5,7 @@ using namespace std;
 
 //sabor - atributo, açucar - atributo, marca - atributo, abrir lata - metodo
 
-class Refri{
+class Refrigerante{
     private:
     bool aberta = false;
     public:
@@ -60,7 +60,7 @@ class Refri{
 };
 
 int main(){
-    Refri Fanta1;
+    Refrigerante Fanta1;
 
     Fanta1.marca = "Fanta";
     Fanta1.sabor = "Ananás";
