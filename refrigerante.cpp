@@ -13,15 +13,6 @@ class Refrigerante{
     int acucar;
     int mli;
     int currentml;
-    public:
-
-    Refrigerante(string marca, string sabor, int acucar, int mli, int currentml){
-        this-> marca = marca;
-        this-> sabor = sabor;
-        this-> acucar = acucar;
-        this-> mli = mli;
-        this-> currentml = currentml;
-    }
 
     void abrirLata() {
         if (!aberta) {
@@ -66,6 +57,33 @@ class Refrigerante{
         cout << "Viraste  a lata e viste o rótulo\nLá estava escrito:\n";
         cout << marca << " de " << sabor << " com " << acucar << " gramas de açucar e " << mli << "ml\n";
     }
+
+    public:
+
+    Refrigerante(string marca, string sabor, int acucar, int mli, int currentml){
+        this-> marca = marca;
+        this-> sabor = sabor;
+        this-> acucar = acucar;
+        this-> mli = mli;
+        this-> currentml = currentml;
+    }
+
+    void executar(int op){
+        switch(op){
+            case 1:
+            abrirLata();
+            break;
+            case 2:
+            beber();
+            break;
+            case 3:
+            verRotulo();
+            break;
+            case 4:
+            atirar();
+            break;
+        }
+    }
 };
 
 int main(){
@@ -82,17 +100,17 @@ do{
 
     switch(opcao){
         case 1:
-        Fanta1.abrirLata();
+        Fanta1.executar(1);
         break;
         case 2:
-        Fanta1.beber();
+        Fanta1.executar(2);
         break;
         case 3:
-        Fanta1.verRotulo();
+        Fanta1.executar(3);
         break;
         break;
         case 4:
-        Fanta1.atirar();
+        Fanta1.executar(4);
         break;
     }
 }while (opcao != 4);
