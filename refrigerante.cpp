@@ -12,7 +12,7 @@ class Refrigerante{
     string marca;
     string sabor;
     int acucar;
-    int mlI;
+    int mli;
     int currentml;
     void abrirLata() {
         if (!aberta) {
@@ -55,7 +55,7 @@ class Refrigerante{
 
     void verRotulo(string marca, string sabor, int acucar){
         cout << "Viraste  a lata e viste o rótulo\nLá estava escrito:\n";
-        cout << marca << " de " << sabor << " com " << acucar << " gramas de açucar e " << mlI << "ml\n";
+        cout << marca << " de " << sabor << " com " << acucar << " gramas de açucar e " << mli << "ml\n";
     }
 };
 
@@ -65,7 +65,7 @@ int main(){
     Fanta1.marca = "Fanta";
     Fanta1.sabor = "Ananás";
     Fanta1.acucar = 0;
-    Fanta1.mlI = 330;
+    Fanta1.mli = 330;
     Fanta1.currentml = 330;
     int opcao;
 
