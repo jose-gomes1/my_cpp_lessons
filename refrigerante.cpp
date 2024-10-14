@@ -8,12 +8,21 @@ using namespace std;
 class Refrigerante{
     private:
     bool aberta = false;
-    public:
     string marca;
     string sabor;
     int acucar;
-    int mli;
+     int mli;
     int currentml;
+    public:
+
+    Refrigerante(string marca, string sabor, int acucar, int mli, int currentml){
+        this-> marca = marca;
+        this-> sabor = sabor;
+        this-> acucar = acucar;
+        this-> mli = mli;
+        this-> currentml = currentml;
+    }
+
     void abrirLata() {
         if (!aberta) {
             aberta = true;
@@ -53,20 +62,14 @@ class Refrigerante{
         }
     }
 
-    void verRotulo(string marca, string sabor, int acucar){
+    void verRotulo(){
         cout << "Viraste  a lata e viste o rótulo\nLá estava escrito:\n";
         cout << marca << " de " << sabor << " com " << acucar << " gramas de açucar e " << mli << "ml\n";
     }
 };
 
 int main(){
-    Refrigerante Fanta1;
-
-    Fanta1.marca = "Fanta";
-    Fanta1.sabor = "Ananás";
-    Fanta1.acucar = 0;
-    Fanta1.mli = 330;
-    Fanta1.currentml = 330;
+    Refrigerante Fanta1("Fanta", "Ananás", 0, 330, 330);
     int opcao;
 
 do{
@@ -85,7 +88,7 @@ do{
         Fanta1.beber();
         break;
         case 3:
-        Fanta1.verRotulo(Fanta1.marca, Fanta1.sabor, Fanta1.acucar);
+        Fanta1.verRotulo();
         break;
         break;
         case 4:
