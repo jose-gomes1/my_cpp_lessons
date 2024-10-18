@@ -12,6 +12,7 @@ class Refrigerante{
     string sabor;
     int acucar;
     int mli;
+    int currentml;
 
     void abrirLata() {
         if (!aberta) {
@@ -23,15 +24,14 @@ class Refrigerante{
     }
 
     void beber() {
-        int tempml = mli;
         if (!aberta) {
             cout << "Não consegues beber o refrigerante sem abrir a lata, idiota!\n";
         } else {
-            while(tempml >= 0){
-                cout << "Estás a beber o teu refrigerante, a lata tem " << tempml << "ml\n";
-                tempml--;
+            while(currentml >= 0){
+                cout << "Estás a beber o teu refrigerante, a lata tem " << currentml << "ml\n";
+                currentml--;
             }
-            if(tempml <= 0){
+            if(currentml <= 0){
                 cout << "A tua lata está vazia\n";
         }
     }
@@ -60,11 +60,12 @@ class Refrigerante{
 
     public:
 
-    Refrigerante(string marca, string sabor, int acucar, int mli){
+    Refrigerante(string marca, string sabor, int acucar, int mli, int currentml){
         this-> marca = marca;
         this-> sabor = sabor;
         this-> acucar = acucar;
         this-> mli = mli;
+        this-> currentml = currentml;
     }
 
     void executar(int op){
@@ -86,7 +87,7 @@ class Refrigerante{
 };
 
 int main(){
-    Refrigerante Fanta1("Fanta", "Ananás", 0, 330);
+    Refrigerante Fanta1("Fanta", "Ananás", 0, 330, 330);
     int opcao;
 
 do{
