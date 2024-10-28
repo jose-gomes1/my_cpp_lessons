@@ -17,6 +17,7 @@ class Common{
     char character; // w - wolves, z - vident, v - villager
     string playerName;
     
+    public:
     int setStatus(); //dispensável
     int getStatus();
     int setCharacter();

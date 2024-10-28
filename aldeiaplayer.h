@@ -4,7 +4,7 @@
 
 #include "aldeiacommon.h"
 
-struct Jogador{
+struct Jogador : public Common{
     int id;
     char character;
 };

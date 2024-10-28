@@ -4,6 +4,6 @@
 
 #include "aldeiacommon.h"
 
-class Vident : private Common{
+class Vident : public Common{
     void predict();
 };

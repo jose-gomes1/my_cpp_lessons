@@ -5,6 +5,6 @@
 #include "aldeiacommon.h"
 
 
-class Villager : private Common{
+class Villager : public Common{
 
 };

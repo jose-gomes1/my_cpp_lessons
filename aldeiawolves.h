@@ -4,6 +4,6 @@
 
 #include "aldeiacommon.h"
 
-class Wolves : private Common{
+class Wolves : public Common{
     int kill();
 };
