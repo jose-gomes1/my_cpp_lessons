@@ -2,8 +2,8 @@
 #define ALDEIAVIDENT_H
 #endif
 
-#include "aldeiacommon.h"
-
 class Vident : public Common{
     void predict();
+    bool foundWolf1 = false;
+    bool foundWolf2 = false;
 };
