@@ -7,6 +7,7 @@ using namespace std;
 
 int main(){
     string nome;
+    cout << "Qual é o nome do ficheiro?\n"
     cin >> nome;
 
     try{
