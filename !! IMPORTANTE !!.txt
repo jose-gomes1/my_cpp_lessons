@@ -1,0 +1,4 @@
+try, catch
+cometários do tipo
+/** @brief descrição do programa
+*/
