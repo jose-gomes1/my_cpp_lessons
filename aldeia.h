@@ -1,5 +1,0 @@
-#include "aldeiacommon.h"
-#include "aldeiaplayer.h"
-#include "aldeiavident.h"
-#include "aldeiawolves.h"
-#include "aldeiavillager.h"
