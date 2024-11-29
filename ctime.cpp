@@ -17,15 +17,29 @@ time_t timestamp;
 // }
 
 int main(){
-    datetime.tm_year = 2008 - 1900;
-    datetime.tm_mon = 3;
-    datetime.tm_mday = 20;
-    datetime.tm_hour = 1;
-    datetime.tm_min = 0;
-    datetime.tm_sec = 0;
+    int ano;
+    int mes;
+    int dia;
+
+    cout << "Insira o ano: ";
+    cin >> ano;
+    cout << "\nInsira o mês: ";
+    cin >> mes;
+    cout << "\nInsira o dia: ";
+    cin >> dia;
+
+    datetime.tm_year = ano - 1900;
+    datetime.tm_mon = mes - 1;
+    datetime.tm_mday = dia;
 
     datetime.tm_isdst = -1;
 
     timestamp = mktime(&datetime);
-    cout << ctime(&timestamp);
+    time_t now = time(NULL);
+    cout << "Tempo: " << ctime(&now) << endl;
+    double seconds_diff = difftime(now, timestamp);
+    int days_since = seconds_diff / 86400;
+    cout << "Passaram-se " << days_since << " dias desde " << ctime(&timestamp);
+
+    return 0;
 }
