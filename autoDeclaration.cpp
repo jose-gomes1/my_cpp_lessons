@@ -42,7 +42,7 @@ void equacaoA(){
     cout << "O vector de saída é: " << "(" << (x1+x2)/2 << " , " << (y1+y2)/2 << ")" << endl;
 }
 
-void power(){
+void power(){ //nasted conditions
     char resposta;
     cout << "Has power?\n";
     cin >> resposta;
