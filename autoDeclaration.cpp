@@ -76,7 +76,7 @@ void power(){ //nasted conditions
 
 int main(){
     power();
-    maiusculas();
-    equacaoA();
+    // maiusculas();
+    // equacaoA();
     return 0;
 }
