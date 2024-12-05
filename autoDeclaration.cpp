@@ -74,9 +74,18 @@ void power(){ //nasted conditions
     
 }
 
+void conditions(){
+    int count = 1;
+    while(count <= 5){
+        cout << count << endl;
+        count++;
+    }
+}
+
 int main(){
+    conditions();
+    maiusculas();
     power();
-    // maiusculas();
-    // equacaoA();
+    equacaoA();
     return 0;
 }
