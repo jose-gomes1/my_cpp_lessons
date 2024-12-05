@@ -22,11 +22,10 @@ void testes(){
 }
 
 void maiusculas(){
-    char letraMin;
+    char letra;
     cout << "Insira uma letra minúscula: ";
-    cin >> letraMin;
-    cin.ignore();
-    cout << "A letra " << letraMin << " em maiúsculas é: " << (char)(letraMin - 32) << endl;
+    cin >> letra;
+    cout << "A letra " << letra << " em maiúsculas é: " << (char)(letra - 32) << endl;
 }
 
 int main(){
