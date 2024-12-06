@@ -34,17 +34,17 @@ int sum3(){
 void graficoHorizontal(int x, int y, int z){
     system("clear");
     if(x <= 40 && y <= 40 && z <= 40){
-    cout << "X - ";
+    cout << "X - " << x << " - ";
     for(int a = 1; a <= x; a++){
         cout << "|" << setw(2);
     }
     cout << endl;
-    cout << "Y - ";
+    cout << "Y - " << y << " - ";
     for(int b = 1; b <= y; b++){
         cout << "|" << setw(2);
     }
     cout << endl;
-    cout << "X - ";
+    cout << "Z - " << z << " - ";
     for(int c = 1; c <= z; c++){
         cout << "|" << setw(2);
     }
