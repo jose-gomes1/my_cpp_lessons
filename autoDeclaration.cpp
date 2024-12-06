@@ -1,4 +1,6 @@
 #include <iostream>
+#include <iomanip>
+#include <limits>
 
 using namespace std;
 
@@ -7,6 +9,7 @@ int number = 123;
 float numberfloat = 3.14;
 auto naoSei = "Não sei"; //apenas para variáveis sem certeza
 unsigned int altura = 10; //não pode ser negativo
+unsigned int dimensao;
 
 void testes(){
     int a;
@@ -82,10 +85,77 @@ void conditions(){
     }
 }
 
+void matriz(int dim){
+
+    system("clear");
+
+    for(int b = 0; b <= dim + 1; b++){
+        cout << "#--";
+    }
+    cout << endl;
+
+    for(int a = 1; a <= dim; a++){
+        cout << "|" << setw(3) << a;
+    }
+    cout << "|\n";
+
+    for(int b = 0; b <= dim + 1; b++){
+        cout << "-#-";
+    }
+    cout << endl;
+
+    for(int i = 1; i <= dim; i++){
+        for(int l = 1; l <= dim; l++)cout << "|" << setw(3) << i*l;
+        cout << "|";
+        cout << endl;
+    }
+
+        for(int b = 0; b <= dim + 1; b++){
+        cout << "--#";
+    }
+    cout << endl;
+}
+
+void tabelaBingo(int dim){
+    int count;
+    system("clear");
+
+    for(int a = 1; a <= dim; a++){
+        cout << "|" << setw(3) << a;
+    }
+    cout << "|\n";
+
+    for(int b = 0; b <= dim + 1; b++){
+        cout << "---";
+    }
+    cout << endl;
+
+    for(int i = 1; i <= dim; i++){
+        for(int l = 1; l <= dim; l++)cout << "|" << setw(3) << ++count;
+        cout << "|";
+        cout << endl;
+    }
+}
+
 int main(){
-    conditions();
-    maiusculas();
-    power();
-    equacaoA();
+    system("clear");
+    cout << "Digite as dimensões da matriz: ";
+    cin >> dimensao;
+
+    if(cin.fail()){
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "ERRO: Valor inválido\n";
+        return 1;
+    }else{
+        tabelaBingo(dimensao);
+        //matriz(dimensao);
+    }
+
+
+    // conditions();
+    // maiusculas();
+    // power();
+    // equacaoA();
     return 0;
 }
