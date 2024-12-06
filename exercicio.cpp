@@ -27,7 +27,7 @@ int sum3(){
     return s;
 }
 
-void graficoHorizontal(int x, int y, int z){
+void graficoHorizontal(unsigned int x, unsigned int y, unsigned int z){
 
     //encontra o maior valor entre x,y e z
     int maior = x;
