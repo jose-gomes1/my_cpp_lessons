@@ -3,10 +3,6 @@
 using namespace std;
 
 int input;
-unsigned int x;
-unsigned int y;
-unsigned int z;
-
 int sum(int n){
     int s = 0;
     while(n > 0){
@@ -32,31 +28,44 @@ int sum3(){
 }
 
 void graficoHorizontal(int x, int y, int z){
-    system("clear");
-    if(x <= 40 && y <= 40 && z <= 40){
-    cout << "X - " << x << " - ";
-    for(int a = 1; a <= x; a++){
-        cout << "|" << setw(2);
-    }
+
+    //encontra o maior valor entre x,y e z
+    int maior = x;
+    if(y > maior) maior = y;
+    if(z > maior) maior = z;
+
+    //valores reais
+    int a,b,c;
+    a = x;
+    b = y;
+    c = z;
+
+    //normaliza os valores
+    x = x * 50 / maior;
+    y = y * 50 / maior;
+    z = z * 50 / maior;
+
+    //imprime o gráfico horizontal 
+
+    cout << "x: " << setw(2) << x << " ";
+    for(int i=0; i<x; i++) cout << "*";
     cout << endl;
-    cout << "Y - " << y << " - ";
-    for(int b = 1; b <= y; b++){
-        cout << "|" << setw(2);
-    }
+
+    cout << "y: " << setw(2) << y << " ";
+    for(int i=0; i<y; i++) cout << "*";
     cout << endl;
-    cout << "Z - " << z << " - ";
-    for(int c = 1; c <= z; c++){
-        cout << "|" << setw(2);
-    }
+
+    cout << "z: " << setw(2) << z << " ";
+    for(int i=0; i<z; i++) cout << "*";
     cout << endl;
-    }
-    else{
-        cout << "ERRO: Valores muito grandes\n";
-    }
+    
+
+    cout << endl;
 }
 
+
 int main(){
-    graficoHorizontal(1,3,5);
+    graficoHorizontal(200,100,500);
     // input = 5;
     // cout << sum(input) << endl;
     // cout << sum2() << endl;
