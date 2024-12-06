@@ -35,17 +35,17 @@ void graficoHorizontal(int x, int y, int z){
     system("clear");
     if(x <= 40 && y <= 40 && z <= 40){
     cout << "X - ";
-    for(int a = 0; a <= x; a++){
+    for(int a = 1; a <= x; a++){
         cout << "|" << setw(2);
     }
     cout << endl;
     cout << "Y - ";
-    for(int b = 0; b <= y; b++){
+    for(int b = 1; b <= y; b++){
         cout << "|" << setw(2);
     }
     cout << endl;
     cout << "X - ";
-    for(int c = 0; c <= z; c++){
+    for(int c = 1; c <= z; c++){
         cout << "|" << setw(2);
     }
     cout << endl;
