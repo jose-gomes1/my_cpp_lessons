@@ -23,7 +23,7 @@ void luzes() {
 
 int main(){
 
-    luzes();
+    //luzes();
 
     int a = 12, b = 25;
 
@@ -31,6 +31,7 @@ int main(){
     cout << "b = " << b << endl;
     cout << "a & b = " << (a & b) << endl;
     cout << "a | b = " << (a | b) << endl;
+    cout << "a ^ b = " << (a ^ b) << endl;
 
     return 0;
 }
