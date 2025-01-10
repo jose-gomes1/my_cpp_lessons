@@ -16,7 +16,7 @@ float triangulo(Vars &forma){
     return result;
 }
 
-float triangulo(Vars &forma){
+float quadrado(Vars &forma){
     cout << "Qual é o lado?\n";
     cin >> forma.base;
     int result = (forma.base * forma.base);
@@ -24,7 +24,7 @@ float triangulo(Vars &forma){
 }
 
 void menu(){
-    Vars tri, qua, ret, trap, cir;
+    Vars tri;
     cout << "Calcular:\n";
     cout << "1. Triangulo\n2. Quadrado\n3. Retangulo\n4. Trapezio\n5. Circulo\n";
     int opcao;
@@ -35,8 +35,8 @@ void menu(){
         cout << "A área do Triangulo é " << areaTri << endl;
         break;
         case 2:
-        float areaTri = triangulo(tri);
-        cout << "A área do Triangulo é " << areaTri << endl;
+        float areaQua = quadrado(tri);
+        cout << "A área do quadrado é " << areaQua << endl;
         break;
         // case 3:
 
