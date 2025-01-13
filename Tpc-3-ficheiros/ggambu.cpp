@@ -30,7 +30,7 @@ void jogarRodada(Ggambu& ativo, Ggambu& bot){
     
     cout << "Bot escolheu: " << (botPalpite == 0 ? "par" : "impar") << endl;
 
-    if (pares == (botPalpite == 0)) {
+    if (pares = botPalpite) {
         cout << "Acertou! Ganhou " << aposta << " berlindes\n";
         ativo.numBer += aposta;
         bot.numBer -= aposta;
