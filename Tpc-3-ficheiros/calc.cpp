@@ -5,7 +5,7 @@ using namespace std;
 struct Forma{
     double base, altura, raio;
     const double PI = 3.1415;
-}; 
+};
 
 double triangulo(Forma &forma) {
     cout << "Qual é a base?\n";
