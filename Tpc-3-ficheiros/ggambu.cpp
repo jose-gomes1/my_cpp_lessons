@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstdlib>
+#include <random>
 #include <ctime>
 
 using namespace std;
