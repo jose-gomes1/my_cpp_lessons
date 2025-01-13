@@ -62,8 +62,7 @@ void menu() {
 
     switch (opcao) {
         case 1: {
-            double area = triangulo(forma);
-            cout << "A Área do Triangulo é: " << area << endl;
+            triangulo(forma);
             break;
         }
         case 2:
