@@ -19,7 +19,7 @@ void jogo() {
     Player player = { rand() % 21 + 1, false };
     Player dealer = { rand() % 10 + 1, true };
     cout << "O valor das tuas cartas e: " << player.total << endl;
-    cout << "O valor das cartas do teu dealer e: " << dealer.total << " + x" << endl;
+    cout << "O valor das cartas do teu dealer e: " << dealer.total << endl;
     char opcao;
 
     while (true) {
