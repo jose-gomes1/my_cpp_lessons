@@ -49,8 +49,6 @@ double circulo(Forma &forma) {
     return resultArea;
 }
 
-
-
 void menu() {
     Forma forma;
     int opcao;
