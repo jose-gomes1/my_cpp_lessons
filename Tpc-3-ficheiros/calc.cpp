@@ -7,27 +7,25 @@ struct Forma{
     const double PI = 3.1415;
 };
 
-double triangulo(Forma &forma) {
+void triangulo(Forma &forma) {
     cout << "Qual é a base?\n";
     cin >> forma.base;
     cout << "E a altura?\n";
     cin >> forma.altura;
     double result = (forma.base * forma.altura) / 2;
     cout << "A Área do Triangulo é: " << result << endl;
-    return result;
 }
 
-double quadrado(Forma &forma) {
+void quadrado(Forma &forma) {
     cout << "Qual é o tamanho do lado??\n";
     cin >> forma.base;
     double resultArea = forma.base * forma.base;
     double resultPerimetro = forma.base * 4;
     cout << "A Área do Quadrado é: " << resultArea << endl;
     cout << "O Perímetro do Quadrado é: " << resultPerimetro << endl;
-    return resultArea;
 }
 
-double retangulo(Forma &forma) {
+void retangulo(Forma &forma) {
     cout << "Qual é a base?\n";
     cin >> forma.base;
     cout << "E a altura?\n";
@@ -36,17 +34,15 @@ double retangulo(Forma &forma) {
     double resultPerimetro = (forma.base + forma.altura) * 2;
     cout << "A Área do Retangulo é: " << resultArea << endl;
     cout << "O Perímetro do Retangulo é: " << resultPerimetro << endl;
-    return resultArea;
 }
 
-double circulo(Forma &forma) {
+void circulo(Forma &forma) {
     cout << "Qual é o raio?\n";
     cin >> forma.raio;
     double resultArea = forma.PI * (forma.raio * forma.raio);
-    double resultPerimetro = 2 * forma.PI * forma.raio;
+    double resultPerimetro = (2 * forma.PI) * forma.raio;
     cout << "A Área do Circulo é: " << resultArea << endl;
     cout << "O Perímetro do Circulo é: " << resultPerimetro << endl;
-    return resultArea;
 }
 
 void menu() {
@@ -59,10 +55,9 @@ void menu() {
     cin >> opcao;
 
     switch (opcao) {
-        case 1: {
+        case 1:
             triangulo(forma);
             break;
-        }
         case 2:
             quadrado(forma);
             break;
