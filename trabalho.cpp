@@ -33,7 +33,6 @@ void Programa::programa()
         
         string guess;
         cout << "Adivinha uma letra: ";
-        cin.ignore();
         getline(cin, guess);
 
         for (char &d : guess) {
