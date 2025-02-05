@@ -1,2 +1,7 @@
-            tries++;
-            cout << "Numero de tentativas: " << tries << endl;
+        string letras = " ";
+        cout << "Letras usadas: " << letras << endl;
+        for (char ad : guess) {
+        if (ad != ' ') {
+            letras += ad;
+        }
+    }

@@ -7,7 +7,6 @@ Programa::Programa(string nickname)
 
 void Programa::programa()
 {
-    int tries = 0;
     string frase;
     bool acertou = false;
     
@@ -33,15 +32,13 @@ void Programa::programa()
         
         string guess;
         cout << "Adivinha uma letra: ";
-        cin.ignore();
-        getline(cin, guess);
+        cin >> guess;
 
         for (char &d : guess) {
         d = toupper(d);
         }
 
         bool encontrou = false;
-
 
         for (size_t i = 0; i < frase.length(); i++) {
         if (frase[i] == guess[0]) {
@@ -54,8 +51,6 @@ void Programa::programa()
         if (!encontrou) {
             system("clear");
             cout << "Letra não encontrada!\n";
-            tries++;
-            cout << "Numero de tentativas falhas: " << tries << endl;
         }
 
         if (palavra_oculta == frase) {
