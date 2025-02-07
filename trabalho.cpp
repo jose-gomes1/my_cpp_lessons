@@ -33,6 +33,7 @@ void Programa::programa()
         string guess;
         cout << "Adivinha uma letra: ";
         cin >> guess;
+        getline(cin, guess);
 
         for (char &d : guess) {
         d = toupper(d);
