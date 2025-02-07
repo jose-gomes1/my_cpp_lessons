@@ -1,63 +1,85 @@
-#include <iostream>
+/**
+ * @file adivinhaFrases.cpp
+ * @brief Jogo de forca onde o usuário tenta adivinhar uma frase.
+ * @author Emanuel Borges e José Gomes
+ * @date 2025-02-07
+ * 
+ * O programa oculta uma frase e permite ao usuário inserir letras para 
+ * revelar a frase gradualmente. Todas as letras e a frase são convertidas 
+ * para maiúsculas automaticamente.
+ */
 
+#include <iostream>
 using namespace std;
 
-void programa() {
-    string frase;
-    bool acertou = false;
+
+string modificarFrase(const string& frase, char simbolo) {
+    string fraseComTracos = frase;
+
+    for (char& c : fraseComTracos) {
+        if (c != ' ') {
+            c = simbolo;
+        } else {
+            c = ' ';
+        }
+    }
+
+    return fraseComTracos;
+}
+
+void revelarLetra(const string& fraseOriginal, string& fraseOculta, char letra) {
+    bool letraEncontrada = false;
+    letra = toupper(letra);
     
-    cout << "Qual é a frase?\n";
+    for (size_t i = 0; i < fraseOriginal.size(); i++) {
+        if (fraseOriginal[i] == letra) {
+            fraseOculta[i] = letra;
+            letraEncontrada = true;
+        }
+    }
+
+    if (!letraEncontrada) {
+        cout << "\033[31m \nLetra incorreta! Tente novamente.\033[37m" << endl;
+    }
+}
+
+void frasses() {
+    string frase, fraseOculta, tentativas;
+    char simbolo = '_', tentativa;
+    
+    cout << "Diga uma frase: ";
     getline(cin, frase);
     for (char &c : frase) {
         c = toupper(c);
     }
+    system("clear || cls");
 
-    string palavra_oculta = "";
-    for (char ch : frase) {
-        if (ch != ' ') {
-            palavra_oculta += "*";
-        } else {
-            palavra_oculta += " ";
+    fraseOculta = modificarFrase(frase, simbolo);
+
+    while (fraseOculta != frase) {
+        cout << "\nFrase atual: " << fraseOculta << endl;
+        cout << "Digite uma letra: ";
+        cin >> tentativa;
+        tentativa = toupper(tentativa);
+
+        if (tentativas.find(tentativa) == string::npos){ //find vai servir para ver se ja foi usada.
+            if (!tentativas.empty()) { //verifica se a string ta vazia.
+                tentativas += " ";
+            }
+            tentativas += tentativa;
         }
-    }
 
-    system("clear");
-
-    while (!acertou) {
-        cout << palavra_oculta << endl;
+        system("clear || cls");
         
-        string guess;
-        cout << "Adivinha uma letra: ";
-        cin >> guess;
-
-        for (char &d : guess) {
-        d = toupper(d);
-        }
-
-        bool encontrou = false;
-
-        for (size_t i = 0; i < frase.length(); i++) {
-        if (frase[i] == guess[0]) {
-            palavra_oculta[i] = guess[0];
-            encontrou = true;
-        system("clear");
-        }
+        revelarLetra(frase, fraseOculta, tentativa);
+        cout << "Usaste: " << tentativas << endl;
     }
 
-        if (!encontrou) {
-            system("clear");
-            cout << "Letra não encontrada!\n";
-        }
-
-        if (palavra_oculta == frase) {
-            acertou = true;
-        }
-    }
-
-    cout << "Parabéns! A frase era: " << frase << endl;
+    cout << "\n\033[32m Acertaste: " <<"\033[37m" << frase << endl;
 }
 
 int main() {
-    programa();
+    system("clear || cls");
+    frasses();
     return 0;
 }
