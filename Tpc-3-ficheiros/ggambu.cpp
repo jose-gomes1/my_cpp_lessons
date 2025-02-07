@@ -49,7 +49,7 @@ int main(){
 
     Ggambu J1 = {"Jogador 1", 10};
     Ggambu J2 = {"Jogador 2", 10};
-    cout << "Bem-vindo ao Ggambu! Cada jogador começa com 10 berlindes\n";
+    cout << "\nBem-vindo ao Ggambu! Cada jogador começa com 10 berlindes\n";
     while(J1.numBer > 0 && J2.numBer > 0){
         cout << "\n--- Começo do Jogo ---\n";
         jogarRodada(J1, J2);
