@@ -8,13 +8,13 @@
 #include "treino.h"
 
 //Função booleana que retorna se um número é par
-bool Ggambu::par(int num)
+bool par(int num)
 {
     return num % 2 == 0;
 }
 
 //O jogo, usando referências para a struct Ggambu, com condições e input do utilizador
-void Ggambu::rodada(Ggambu &J1, Ggambu &Bot)
+void rodada(Ggambu &J1, Ggambu &Bot)
 {
     int aposta, palpite;
     cout << "Quantos berlindes queres apostar?\n";

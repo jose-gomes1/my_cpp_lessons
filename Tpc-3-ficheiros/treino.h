@@ -16,8 +16,9 @@ using namespace std;
 struct Ggambu{
     string nome;
     int numBer;
-    bool par(int num);
-    void rodada(Ggambu& J1, Ggambu& Bot);
 };
 
+    bool par(int num);
+    void rodada(Ggambu& J1, Ggambu& Bot);
+    
 #endif

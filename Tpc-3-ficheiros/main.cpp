@@ -14,7 +14,7 @@ int main(){
     Ggambu Bot = {"Jogador 2 (Bot)", 10};
     cout << "Bem-vindo ao Ggambu\nCada jogador começará com 10 berlindes\n";
     while(J1.numBer > 0 && Bot.numBer > 0){
-        J1.rodada(J1, Bot);
+        rodada(J1, Bot);
     }
 
     cout << "O jogo acabou\n";
