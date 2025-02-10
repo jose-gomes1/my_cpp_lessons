@@ -7,7 +7,9 @@
 
 #include "treino.h"
 
-//Função main com a declaração das struct Ggambu J1 e Bot, um ciclo while para a inicialização do jogo e as condições de finalização do mesmo
+/**
+ * @brief Função main com a declaração das struct Ggambu J1 e Bot, um ciclo while para a inicialização do jogo e as condições de finalização do mesmo
+ */
 int main(){
     srand(time(0));
     Ggambu J1 = {"Jogador 1", 10};

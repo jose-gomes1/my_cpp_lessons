@@ -7,13 +7,17 @@
 
 #include "treino.h"
 
-//Função booleana que retorna se um número é par
+/**
+ * @brief Função booleana que retorna se um número é par
+ */
 bool par(int num)
 {
     return num % 2 == 0;
 }
 
-//O jogo, usando referências para a struct Ggambu, com condições e input do utilizador
+/**
+ * @brief O jogo, usando referências para a struct Ggambu, com condições e input do utilizador
+ */
 void rodada(Ggambu &J1, Ggambu &Bot)
 {
     int aposta, palpite;
