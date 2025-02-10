@@ -48,7 +48,7 @@ int main(){
         rodada(J1, Bot);
     }
 
-    cout << "\nO jogo acabou\n";
+    cout << "O jogo acabou\n";
 
     if(J1.numBer >= 20){
         cout << J1.nome << " venceu o jogo com " << J1.numBer << " berlindes\n";
