@@ -1,5 +1,5 @@
 /**
- * @file treino.cpp
+ * @file treino.h
  * @author José Gomes
  * @date 10-02-2025
  * @brief Treino para o jogo de Ggambu para apresentar na aula de C++
