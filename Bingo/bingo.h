@@ -8,6 +8,7 @@
 #ifndef BINGO_H
 #define BINGO_H
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 class Bingo{
