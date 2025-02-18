@@ -11,3 +11,5 @@ int main(){
     Bingo Bingo{};
     return 0;
 }
+
+//notas: usar param para variáveis e brief para funções
