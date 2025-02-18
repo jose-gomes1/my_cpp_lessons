@@ -6,3 +6,8 @@
  */
 
 #include "bingo.h"
+
+int main(){
+    Bingo Bingo{};
+    return 0;
+}
